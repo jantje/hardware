@@ -53,7 +53,7 @@ recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.S.flags} -DF_CPU=
 recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{build.path}/{archive_file}" "{object_file}"
 
 ## Combine gc-sections, archives, and objects
-recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.exe" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm -lpthread
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.exe" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm -lpthread
 
 ## Create eeprom
 recipe.objcopy.eep.pattern={compiler.size.cmd}  "{build.path}/{build.project_name}.exe"
