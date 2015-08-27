@@ -65,7 +65,7 @@ recipe.c.combine.pattern.windows="{compiler.path}{compiler.c.elf.cmd}" {compiler
 recipe.objcopy.eep.pattern={compiler.size.cmd}  "{build.path}"
 
 ## Create hex
-recipe.objcopy.hex.pattern={compiler.size.cmd}  "{build.path}/{build.project_name}.*"
+recipe.objcopy.hex.pattern={compiler.size.cmd}  "{build.path}"
 
 ## Compute size
 recipe.size.pattern={compiler.size.cmd} -lrt "{build.path}"
