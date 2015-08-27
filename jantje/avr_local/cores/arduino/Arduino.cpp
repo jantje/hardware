@@ -1,9 +1,6 @@
 #include "Arduino.h"
-#ifdef _WIN32
-    #include <windows.h>
-#else
-    #include <unistd.h>
-#endif
+#include <unistd.h>
+
 
 
 size_t strlcat(char * dst, const char * src, size_t siz)
@@ -137,18 +134,21 @@ void analogWrite(uint8_t, int)
 {
 	//No code needed
 }
+
+static unsigned long theMillis=0;
 void delay(unsigned long milliseconds)
 {
-//#ifdef _WIN32
-//        Sleep(milliseconds);
-//#else
-//        usleep(milliseconds * 1000); // takes microseconds
-//#endif
+#ifdef __MINGW_H
+	sleep(milliseconds/1000);
+#else
+        usleep(milliseconds * 1000); // takes microseconds
+#endif
+theMillis+=milliseconds;
 }
 
 unsigned long millis(void)
 {
-	static unsigned long theMillis=0;
+
 	return ++theMillis;
 }
 int digitalRead(uint8_t pin)
