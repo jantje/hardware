@@ -16,7 +16,14 @@
 #include "Stream.h"
 #include "pins_arduino.h"
 //#include <algorithm>
+#include <ctype.h>
+#ifdef __MINGW_H
+#include "windows.h"
+#include <string.h>
+typedef unsigned char boolean;
+#else
 typedef bool boolean;
+#endif
 #include "WCharacter.h"
 #include "WString.h"
 #include "HardwareSerial.h"
