@@ -59,8 +59,7 @@ recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compil
 
 ## Combine gc-sections, archives, and objects
 recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.exe" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm -lpthread
-
-recipe.c.combine.pattern.windows="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.exe" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm -mthread
+recipe.c.combine.pattern.windows="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.exe" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm 
 
 ## Create eeprom
 recipe.objcopy.eep.pattern={compiler.size.cmd}  "{build.path}/{build.project_name}.exe"
