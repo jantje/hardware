@@ -1,0 +1,28 @@
+copy the file zero.gdb to
+[home].arduino15/packages/arduino/tools/openocd/0.9.0-arduino/share/openocd/scripts
+
+
+in eclipse 
+make a project (or configuration) based on jantje/samd/boards.txt
+compile the project
+
+make a debug configuration based on "C/C++ application"
+select the correct project
+on the main tab:
+select "select other" and use "legacy create process launcher"
+Make sure c/c++application point to the correct elf file.
+
+on the arguments tab
+unselect use default
+enter [home]/.arduino15/packages/arduino/tools/openocd/0.9.0-arduino/share/openocd/scripts in the working directory
+
+no need to modify the environment tab
+
+on the debugger tab
+select debugger gdb/mi
+GDB debugger=[Arduino]/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/arm-none-eabi/bin/arm-none-eabi-gdb
+GDB command file=zero.gdb
+gdb command set=standard
+protocol=mi
+
+click apply and have a happy debug session
