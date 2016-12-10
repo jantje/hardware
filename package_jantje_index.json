@@ -1,0 +1,136 @@
+{
+  "packages": [
+    {
+      "name": "Jantje Arduino boards local compile",
+      "maintainer": "jantje",
+      "websiteURL": "http://eclipse.baeyns.it/",
+      "email": "packages@baeyens.it",
+      "help": {
+        "online": "http://eclipse.baeyns.it"
+      },
+      "platforms": [
+        {
+          "name": "Arduino AVR Boards (local debug)",
+          "architecture": "avr",
+          "version": "1.0.0",
+          "category": "debug",
+          "help": {
+            "online": "http://sloeber.io/"
+          },
+          "url": "http://eclipse.baeyens.it/download/cores/debug-avr-1.0.0.zip",
+          "archiveFileName": "debug-avr-1.0.0.zip",
+          "checksum": "SHA-256:5292d3559de74eb990ff570df43887b44d4e3c6b80ab4ab0f945e94dd68d8210",
+          "size": "4991634",
+          "boards": [
+            {"name": "Arduino Yún"},
+            {"name": "Arduino/Genuino Uno"},
+            {"name": "Arduino Diecimila"},
+            {"name": "Arduino Nano"},
+            {"name": "Arduino/Genuino Mega"},
+            {"name": "Arduino MegaADK"},
+            {"name": "Arduino Leonardo"},
+            {"name": "Arduino/Genuino Micro"},
+            {"name": "Arduino Esplora"},
+            {"name": "Arduino Mini"},
+            {"name": "Arduino Ethernet"},
+            {"name": "Arduino Fio"},
+            {"name": "Arduino BT"},
+            {"name": "Arduino LilyPadUSB"},
+            {"name": "Arduino Lilypad"},
+            {"name": "Arduino Pro"},
+            {"name": "Arduino ATMegaNG"},
+            {"name": "Arduino Robot Control"},
+            {"name": "Arduino Robot Motor"},
+            {"name": "Arduino Gemma"}
+          ],
+          "toolsDependencies": [
+             {
+              "packager": "jantje",
+              "name": "MinGW",
+              "version": "5.3.0"
+            }
+
+          ]
+        },
+        {
+          "name": "Arduino SAM Boards (local debug)",
+          "architecture": "sam",
+          "version": "1.6.8",
+          "category": "Arduino",
+          "url": "http://downloads.arduino.cc/cores/sam-1.6.8.tar.bz2",
+          "archiveFileName": "sam-1.6.8.tar.bz2",
+          "checksum": "SHA-256:cc95b49b7dfe4138687a559d963db09b9b85352051173d93ad8c272aa23c2337",
+          "size": "16471779",
+          "boards": [
+            {"name": "Arduino Due"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.6.1-arduino"
+            }
+          ]
+        },
+        {
+          "name": "Arduino SAMD Boards (local debug)",
+          "architecture": "samd",
+          "version": "1.6.6",
+          "category": "Arduino",
+          "url": "http://downloads.arduino.cc/cores/samd-1.6.6.tar.bz2",
+          "archiveFileName": "samd-1.6.6.tar.bz2",
+          "checksum": "SHA-256:08e97127acf41ac28c195803be1d22a5cbf720d4cff58db9458af9255d6ee7b3",
+          "size": "997331",
+          "boards": [
+            { "name": "Arduino/Genuino Zero" },
+            { "name": "Arduino/Genuino MKR1000" }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.6.1-arduino"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.9.0-arduino"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS",
+              "version": "4.0.0-atmel"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+      "tools": [
+        {
+          "name": "MinGW",
+          "version": "5.3.0",
+          "systems": [
+            {
+              "host": "i686-mingw32",
+              "archiveFileName": "gcc-arm-none-eabi-4.8.3-2014q1-windows.tar.gz",
+              "url": "http://downloads.arduino.cc/gcc-arm-none-eabi-4.8.3-2014q1-windows.tar.gz",
+              "checksum": "SHA-256:fd8c111c861144f932728e00abd3f7d1107e186eb9cd6083a54c7236ea78b7c2",
+              "size": "84537449"
+            }
+          ]
+        }
+      ]
+     ]
+}
+
