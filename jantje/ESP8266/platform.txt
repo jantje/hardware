@@ -9,7 +9,6 @@ name=ESP8266 Modules
 version=1.6.4
 
 
-#packages=d:/embedded/V4/sloeber/ArduinoPlugin/packages
 runtime.platform.path={packages}/esp8266/hardware/esp8266/1.6.5-947-g39819f0
 
 JANTJE.CORE.REFERENCED.PLATFORM={runtime.platform.path}

@@ -1,9 +1,12 @@
+install arduino samd version 1.6.9
+
 copy the file zero.gdb to
-[home].arduino15/packages/arduino/tools/openocd/0.9.0-arduino/share/openocd/scripts
+[eclipse]arduinoPlugin/packages/arduino/tools/openocd/0.9.0-arduino/share/openocd/scripts
 
 
 in eclipse 
 make a project (or configuration) based on jantje/samd/boards.txt
+using the programming port
 compile the project
 
 make a debug configuration based on "C/C++ application"
@@ -14,13 +17,14 @@ Make sure c/c++application point to the correct elf file.
 
 on the arguments tab
 unselect use default
-enter [home]/.arduino15/packages/arduino/tools/openocd/0.9.0-arduino/share/openocd/scripts in the working directory
+enter ${eclipse_home}/arduinoPlugin/packages/arduino/tools/openocd/0.9.0-arduino/share/openocd/scripts 
+in the working directory
 
 no need to modify the environment tab
 
 on the debugger tab
 select debugger gdb/mi
-GDB debugger=[Arduino]/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/arm-none-eabi/bin/arm-none-eabi-gdb
+GDB debugger=${eclipse_home}/arduinoPlugin/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/arm-none-eabi-gdb
 GDB command file=zero.gdb
 gdb command set=standard
 protocol=mi
