@@ -92,19 +92,12 @@ recipe.size.regex.data=^(?:\.data|\.rodata|\.bss)\s+([0-9]+).*
 
 tools.esptool.cmd=esptool
 tools.esptool.cmd.windows=esptool.exe
-tools.esptool.path={runtime.tools.esptool.path}
+tools.esptool.path={runtime.tools.esptool-0.4.9.path}
+tools.esptool.network_cmd=python
+tools.esptool.network_cmd.windows=python.exe
 
 tools.esptool.upload.protocol=esp
 tools.esptool.upload.params.verbose=-vv
 tools.esptool.upload.params.quiet=
 tools.esptool.upload.pattern="{path}/{cmd}" {upload.verbose} -cd {upload.resetmethod} -cb {upload.speed} -cp "{serial.port}" -ca 0x00000 -cf "{build.path}/{build.project_name}.bin"
-tools.esptool.network.pattern=python "{path}/espota.py" "{serial.port}" "{network.port}" "{build.path}/{build.project_name}.bin"
-
-tools.espota.cmd=python
-tools.espota.cmd.windows=python.exe
-tools.espota.path={runtime.platform.path}/tools
-
-tools.espota.upload.protocol=espota
-tools.espota.upload.params.verbose=
-tools.espota.upload.params.quiet=
-tools.espota.upload.pattern="{cmd}" "{path}/espota.py" "{serial.port}" 8266 "{build.path}/{build.project_name}.bin"
+tools.esptool.upload.network_pattern="{network_cmd}" "{runtime.platform.path}/tools/espota.py" -i "{serial.port}" -p "{network.port}" "--auth={network.password}" -f "{build.path}/{build.project_name}.bin"
