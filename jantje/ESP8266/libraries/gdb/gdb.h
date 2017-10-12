@@ -2,6 +2,6 @@
 #define __GDB_H
 #include "gdbstub.h"
 
-#define RAMFUNC __attribute__ ((section( ".entry.text")))
+#define RAMFUNC __attribute__ ((section( ".iram.text")))
 
 #endif
