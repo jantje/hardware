@@ -27,7 +27,7 @@ work for your program anymore. This will fail if your program sets an UART inter
 the gdbstub_init call.
 */
 #ifndef GDBSTUB_CTRLC_BREAK
-#define GDBSTUB_CTRLC_BREAK 1
+#define GDBSTUB_CTRLC_BREAK 0
 #endif
 
 /*
