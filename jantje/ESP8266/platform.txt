@@ -5,14 +5,11 @@
 # For more info:
 # https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
 
-name=ESP8266 Modules
-version=1.6.4
+name=ESP8266 Modules in debug
+version=1.0
 
 
 runtime.platform.path={packages}/esp8266/hardware/esp8266/1.6.5-947-g39819f0
-
-JANTJE.CORE.REFERENCED.PLATFORM={runtime.platform.path}
-JANTJE.VARIANT.REFERENCED.PLATFORM={JANTJE.CORE.REFERENCED.PLATFORM}
 
 
 
