@@ -5,7 +5,7 @@
 # For more info:
 # http://eclipse.baeyens.it
 
-name=Local avr Simulation
+name=Local avr Simulation 
 version=1.0.0
 
 # AVR compile variables
@@ -36,6 +36,7 @@ compiler.cpp.extra_flags=
 compiler.ar.extra_flags=
 compiler.objcopy.eep.extra_flags=
 compiler.elf2hex.extra_flags=
+compiler.path.windows={runtime.tools.mingw.path}/bin/
 
 # AVR compile patterns
 # --------------------
@@ -60,18 +61,3 @@ recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compil
 ## Combine gc-sections, archives, and objects
 recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.exe" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm -lpthread
 recipe.c.combine.pattern.windows="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.exe" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm 
-
-## Create eeprom
-recipe.objcopy.eep.pattern={compiler.size.cmd}  "{build.path}"
-
-## Create hex
-recipe.objcopy.hex.pattern={compiler.size.cmd}  "{build.path}"
-
-## Compute size
-recipe.size.pattern={compiler.size.cmd} -lrt "{build.path}"
-recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
-recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
-recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
-
-
-
