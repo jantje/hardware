@@ -17,7 +17,7 @@
           "help": {
             "online": "http://sloeber.io/"
           },
-          "url": "http://eclipse.baeyens.it/download/cores/local-debug-arduino-avr-1.0.0.zip",
+          "url": "https://github.com/jantje/hardware/releases/download/1.0.0/local-debug-arduino-avr-1.0.0.zip",
           "archiveFileName": "local-debug-arduino-avr-1.0.0.zip",
           "checksum": "SHA-256:5292d3559de74eb990ff570df43887b44d4e3c6b80ab4ab0f945e94dd68d8210",
           "size": "4991634",
@@ -61,7 +61,7 @@
             {
               "host": "i686-mingw32",
               "archiveFileName": "min_gw_5.3.0.zip",
-              "url": "http://downloads.arduino.cc/gcc-arm-none-eabi-4.8.3-2014q1-windows.tar.gz",
+              "url": "https://github.com/jantje/hardware/releases/download/1.0.0/min_gw_5.3.0.zip",
               "checksum": "SHA-256:fd8c111c861144f932728e00abd3f7d1107e186eb9cd6083a54c7236ea78b7c2",
               "size": "84537449"
             }
