@@ -5,7 +5,7 @@ menu.type=Debug or unit test
 
 ##############################################################
 
-yun.name=Arduino Yún
+yun.name=Arduino Yun
 yun.upload.via_ssh=true
 
 yun.vid.0=0x2341
