@@ -136,16 +136,22 @@ void analogWrite(uint8_t, int)
 }
 
 static unsigned long theMillis=0;
-void delay(unsigned long milliseconds)
-{
+void delay(unsigned long milliseconds) {
 #ifdef __MINGW_H
 	sleep(milliseconds/1000);
 #else
-        usleep(milliseconds * 1000); // takes microseconds
+	usleep(milliseconds * 1000); // takes microseconds
 #endif
-theMillis+=milliseconds;
+	theMillis += milliseconds;
 }
-
+void delayMicroseconds(unsigned int us) {
+#ifdef __MINGW_H
+	sleep(us/1000);
+#else
+	usleep(us); // takes microseconds
+#endif
+	theMillis += us;
+}
 unsigned long millis(void)
 {
 
