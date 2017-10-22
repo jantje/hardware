@@ -12,6 +12,50 @@
         {
           "name": "Arduino avr Boards (local debug)",
           "architecture": "pc",
+          "version": "1.0.1",
+          "category": "debug",
+          "help": {
+            "online": "http://sloeber.io/"
+          },
+          "url": "https://github.com/jantje/hardware/releases/download/1.0.0/local-debug-arduino-avr-1.0.1.zip",
+          "archiveFileName": "local-debug-arduino-avr-1.0.1.zip",
+          "checksum": "SHA-256:5292d3559de74eb990ff570df43887b44d4e3c6b80ab4ab0f945e94dd68d8210",
+          "size": "4991634",
+          "boards": [
+            {"name": "Arduino Yun"},
+            {"name": "Arduino/Genuino Uno"},
+            {"name": "Arduino Diecimila"},
+            {"name": "Arduino Nano"},
+            {"name": "Arduino/Genuino Mega"},
+            {"name": "Arduino MegaADK"},
+            {"name": "Arduino Leonardo"},
+            {"name": "Arduino/Genuino Micro"},
+            {"name": "Arduino Esplora"},
+            {"name": "Arduino Mini"},
+            {"name": "Arduino Ethernet"},
+            {"name": "Arduino Fio"},
+            {"name": "Arduino BT"},
+            {"name": "Arduino LilyPadUSB"},
+            {"name": "Arduino Lilypad"},
+            {"name": "Arduino Pro"},
+            {"name": "Arduino ATMegaNG"},
+            {"name": "Arduino Robot Control"},
+            {"name": "Arduino Robot Motor"},
+            {"name": "Arduino Gemma"}
+          ],
+          "toolsDependencies": [
+             {
+              "packager": "Jantje",
+              "name": "MinGW",
+              "version": "5.3.0"
+            }
+
+          ]
+        }
+      ,
+        {
+          "name": "Arduino avr Boards (local debug)",
+          "architecture": "pc",
           "version": "1.0.0",
           "category": "debug",
           "help": {
