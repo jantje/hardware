@@ -1,32 +1,20 @@
-install arduino samd version 1.6.9
+install the latest arduino samd version
 
-copy the file zero.gdb to
-[eclipse]arduinoPlugin/packages/arduino/tools/openocd/0.9.0-arduino/share/openocd/scripts
+in windows->preferences->run/debug->openOCD->
+set executable openocd 
+set path D:\embedded\sloeber\arduinoPlugin\packages\arduino\tools\openocd\0.9.0-arduino6-static\bin
 
 
 in eclipse 
 make a project (or configuration) based on jantje/samd/boards.txt
-using the programming port
 compile the project
 
-make a debug configuration based on "C/C++ application"
+make a debug configuration based on "GBD OpenOCD debugging"
 select the correct project
-on the main tab:
-select "select other" and use "legacy create process launcher"
-Make sure c/c++application point to the correct elf file.
+on he debugging tab
+set as config options for openocd -s ${openocd_path}/../share\openocd\scripts -f  board/arduino_zero.cfg
+for gdb set ${eclipse_home}\arduinoPlugin\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\bin\arm-none-eabi-gdb.exe
 
-on the arguments tab
-unselect use default
-enter ${eclipse_home}/arduinoPlugin/packages/arduino/tools/openocd/0.9.0-arduino/share/openocd/scripts 
-in the working directory
 
-no need to modify the environment tab
-
-on the debugger tab
-select debugger gdb/mi
-GDB debugger=${eclipse_home}/arduinoPlugin/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/arm-none-eabi-gdb
-GDB command file=zero.gdb
-gdb command set=standard
-protocol=mi
 
 click apply and have a happy debug session
