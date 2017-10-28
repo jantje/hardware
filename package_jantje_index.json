@@ -3,12 +3,50 @@
     {
       "name": "Jantje",
       "maintainer": "jantje",
-      "websiteURL": "http://eclipse.baeyns.it/",
+      "websiteURL": "http://eclipse.baeyens.it/",
       "email": "packages@baeyens.it",
       "help": {
         "online": "http://eclipse.baeyens.it"
       },
-      "platforms": [
+      "platforms": [    {
+          "name": "esp hardware debug",
+          "architecture": "esp8266",
+          "version": "1.0.0",
+          "category": "debug",
+          "help": {
+            "online": "http://sloeber.io/"
+          },
+          "url": "https://github.com/jantje/hardware/releases/download/1.0.0/esp8266-hardware-debug-1.0.1.zip",
+          "archiveFileName": "esp8266-hardware-debug-1.0.1.zip",
+          "checksum": "SHA-256:5292d3559de74eb990ff570df43887b44d4e3c6b80ab4ab0f945e94dd68d8210",
+          "size": "4991634",
+          "boards": [
+            {"name": "esp8266 debug"}
+          ],
+          "toolsDependencies": [
+             
+          ]
+        }
+      ,      {
+          "name": "samd hardware debug",
+          "architecture": "samd",
+          "version": "1.0.0",
+          "category": "debug",
+          "help": {
+            "online": "http://sloeber.io/"
+          },
+          "url": "https://github.com/jantje/hardware/releases/download/1.0.0/zero-hardware-debug-1.0.0.zip",
+          "archiveFileName": "zero-hardware-debug-1.0.0.zip",
+          "checksum": "SHA-256:5292d3559de74eb990ff570df43887b44d4e3c6b80ab4ab0f945e94dd68d8210",
+          "size": "4991634",
+          "boards": [
+            {"name": "Arduino zero debug"}
+          ],
+          "toolsDependencies": [
+             
+          ]
+        }
+      ,
         {
           "name": "Arduino avr Boards (local debug)",
           "architecture": "pc",
