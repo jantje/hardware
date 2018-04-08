@@ -1,3 +1,4 @@
+#define ARDUINO_MAIN
 #include "Arduino.h"
 #include <unistd.h>
 

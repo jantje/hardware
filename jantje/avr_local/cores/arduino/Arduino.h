@@ -12,9 +12,14 @@
 //#include <avr/io.h>
 //#include <avr/interrupt.h>
 #define PROGMEM
+#define NOT_A_PIN 0
+#define NOT_A_PORT 0
+
+#define NOT_AN_INTERRUPT -1
+
 #include "binary.h"
 #include "Stream.h"
-#include "pins_arduino.h"
+
 //#include <algorithm>
 #include <ctype.h>
 #ifdef __MINGW_H
@@ -160,10 +165,7 @@ extern const uint8_t PROGMEM digital_pin_to_timer_PGM[];
 #define portInputRegister(P) ( (volatile uint8_t *)( pgm_read_word( port_to_input_PGM + (P))) )
 #define portModeRegister(P) ( (volatile uint8_t *)( pgm_read_word( port_to_mode_PGM + (P))) )
 
-#define NOT_A_PIN 0
-#define NOT_A_PORT 0
 
-#define NOT_AN_INTERRUPT -1
 
 #ifdef ARDUINO_MAIN
 #define PA 1
@@ -228,5 +230,5 @@ size_t strlcpy(char *dst, const char *src, size_t siz);
 #define _BV(bit) (1 << (bit))
 #define ISR(WDT_vect, ISR_NAKED) void Not_used( uint8_t* SP)
 #define pgm_read_byte(a) (*a)
-
+#include "pins_arduino.h"
 #endif
