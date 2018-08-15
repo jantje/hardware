@@ -20,11 +20,12 @@
 */
 
 #include "WString.h"
+#include "stdlib_noniso.h"
 
 
 char *utoa (unsigned char __val, char *__s, unsigned char __radix)
 {
-	return utoa ((unsigned int) __val, __s, (int) __radix);
+	return ultoa ((unsigned long) __val, __s, (int) __radix);
 }
 
 char *itoa (int __val, char *__s, unsigned char __radix)
@@ -35,11 +36,6 @@ char *itoa (int __val, char *__s, unsigned char __radix)
 char *ltoa (long __val, char *__s, unsigned char __radix)
 {
 	return ltoa ( __val, __s, (int) __radix);
-}
-
-char *ultoa (unsigned long __val, char *__s, unsigned char __radix)
-{
-	return ultoa ( __val, __s, (int) __radix);
 }
 
 char *dtostrf(float __val, unsigned char __width, unsigned char __prec, char *__s)
