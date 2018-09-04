@@ -1,1 +1,1 @@
-tools.openocd.upload.pattern="{path}/{cmd}" {upload.verbose} -s "{path}/share/openocd/scripts/" -f "{runtime.referenced.platform.path}/variants/arduino_zero/{build.openocdscript}" -c "telnet_port disabled; program {{{build.path}/{build.project_name}.bin}} verify reset 0x2000; shutdown"
+tools.openocd.upload.pattern="{path}/{cmd}" {upload.verbose} -s "{path}/share/openocd/scripts/" -f "{build.variant.path}/{build.openocdscript}" -c "telnet_port disabled; program {{{build.path}/{build.project_name}.bin}} verify reset 0x2000; shutdown"
