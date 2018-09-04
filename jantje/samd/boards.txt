@@ -16,6 +16,11 @@
 
 # Arduino/Genuino Zero (Prorgamming Port)
 # ---------------------------------------
+
+
+menu.UploadTool=Upload with(out) bootloader
+
+
 arduino_zero_edbg.name=Arduino/Genuino Zero debug (Programming Port)
 arduino_zero_edbg.vid.0=0x03eb
 arduino_zero_edbg.pid.0=0x2157
@@ -33,7 +38,6 @@ arduino_zero_edbg.build.usb_manufacturer="Arduino LLC"
 arduino_zero_edbg.build.board=SAMD_ZERO
 arduino_zero_edbg.build.core=arduino:arduino
 arduino_zero_edbg.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags}
-arduino_zero_edbg.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 arduino_zero_edbg.build.openocdscript=openocd_scripts/arduino_zero.cfg
 arduino_zero_edbg.build.variant=arduino:arduino_zero
 arduino_zero_edbg.build.variant_system_lib=
@@ -46,3 +50,7 @@ arduino_zero_edbg.compiler.c.flags=-mcpu={build.mcu} -mthumb -c -g -Og {compiler
 arduino_zero_edbg.compiler.cpp.flags=-mcpu={build.mcu} -mthumb -c -g -Og {compiler.warning_flags} -std=gnu++11 -ffunction-sections -fdata-sections -fno-threadsafe-statics -nostdlib --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -MMD -DDEBUG
 arduino_zero_edbg.compiler.elf2hex.flags=--debugging -O binary
 
+arduino_zero_edbg.menu.UploadTool.with=with bootloader (Arduino IDE default)
+arduino_zero_edbg.menu.UploadTool.without=without bootloader
+arduino_zero_edbg.menu.UploadTool.with.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+arduino_zero_edbg.menu.UploadTool.without.build.ldscript=linker_scripts/gcc/flash_without_bootloader.ld
