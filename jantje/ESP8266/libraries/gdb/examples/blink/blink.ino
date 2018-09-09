@@ -9,14 +9,14 @@ void RAMFUNC setup()
 	gdbstub_init();
 #endif
 // Add your initialization code here
-	pinMode(BUILTIN_LED, OUTPUT);
+	pinMode(LED_BUILTIN, OUTPUT);
 }
 
 // The loop function is called in an endless loop
 void RAMFUNC loop()
 {
-	digitalWrite(BUILTIN_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
+	digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
 	delay(1000);              // wait for a second
-	digitalWrite(BUILTIN_LED, LOW);    // turn the LED off by making the voltage LOW
+	digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
 	delay(1000);              // wait for a second
 }
