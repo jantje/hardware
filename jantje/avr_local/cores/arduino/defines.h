@@ -3,7 +3,7 @@
 #define _DEFINES_H_ 1
 #include "Arduino.h"
 
-#define PINA    (0X00)
+extern uint8_t PINA    ;
 #define PINA7   7
 #define PINA6   6
 #define PINA5   5
@@ -13,7 +13,7 @@
 #define PINA1   1
 #define PINA0   0
 
-#define DDRA    (0X01)
+extern uint8_t DDRA    ;
 #define DDA7    7
 #define DDA6    6
 #define DDA5    5
@@ -23,7 +23,7 @@
 #define DDA1    1
 #define DDA0    0
 
-#define PORTA   (0X02)
+extern uint8_t PORTA   ;
 #define PA7     7
 #define PA6     6
 #define PA5     5
@@ -33,7 +33,7 @@
 #define PA1     1
 #define PA0     0
 
-#define PINB    (0X03)
+extern uint8_t PINB   ;
 #define PINB7   7
 #define PINB6   6
 #define PINB5   5
@@ -43,7 +43,7 @@
 #define PINB1   1
 #define PINB0   0
 
-#define DDRB    (0x04)
+extern uint8_t DDRB ;
 #define DDB7    7
 #define DDB6    6
 #define DDB5    5
@@ -53,7 +53,7 @@
 #define DDB1    1
 #define DDB0    0
 
-#define PORTB   (0x05)
+extern uint8_t PORTB;
 #define PB7     7
 #define PB6     6
 #define PB5     5
@@ -63,7 +63,7 @@
 #define PB1     1
 #define PB0     0
 
-#define PINC    (0x06)
+extern uint8_t PINC  ;
 #define PINC7   7
 #define PINC6   6
 #define PINC5   5
@@ -73,7 +73,7 @@
 #define PINC1   1
 #define PINC0   0
 
-#define DDRC    (0x07)
+extern uint8_t DDRC;
 #define DDC7    7
 #define DDC6    6
 #define DDC5    5
@@ -83,7 +83,7 @@
 #define DDC1    1
 #define DDC0    0
 
-#define PORTC   (0x08)
+extern uint8_t PORTC ;
 #define PC7     7
 #define PC6     6
 #define PC5     5
@@ -93,7 +93,7 @@
 #define PC1     1
 #define PC0     0
 
-#define PIND    (0x09)
+extern uint8_t PIND  ;
 #define PIND7   7
 #define PIND6   6
 #define PIND5   5
@@ -103,7 +103,7 @@
 #define PIND1   1
 #define PIND0   0
 
-#define DDRD    (0x0A)
+extern uint8_t DDRD    ;
 #define DDD7    7
 #define DDD6    6
 #define DDD5    5
@@ -113,7 +113,7 @@
 #define DDD1    1
 #define DDD0    0
 
-#define PORTD   (0x0B)
+extern uint8_t PORTD   ;
 #define PD7     7
 #define PD6     6
 #define PD5     5
@@ -123,7 +123,7 @@
 #define PD1     1
 #define PD0     0
 
-#define PINE    (0x0C)
+extern uint8_t PINE   ;
 #define PINE7   7
 #define PINE6   6
 #define PINE5   5
@@ -133,7 +133,7 @@
 #define PINE1   1
 #define PINE0   0
 
-#define DDRE    (0x0D)
+extern uint8_t DDRE    ;
 #define DDE7    7
 #define DDE6    6
 #define DDE5    5
@@ -143,7 +143,7 @@
 #define DDE1    1
 #define DDE0    0
 
-#define PORTE   (0x0E)
+extern uint8_t PORTE  ;
 #define PE7     7
 #define PE6     6
 #define PE5     5
@@ -153,7 +153,7 @@
 #define PE1     1
 #define PE0     0
 
-#define PINF    (0x0F)
+extern uint8_t PINF    ;
 #define PINF7   7
 #define PINF6   6
 #define PINF5   5
@@ -163,7 +163,7 @@
 #define PINF1   1
 #define PINF0   0
 
-#define DDRF    (0x10)
+extern uint8_t DDRF    ;
 #define DDF7    7
 #define DDF6    6
 #define DDF5    5
@@ -173,7 +173,7 @@
 #define DDF1    1
 #define DDF0    0
 
-#define PORTF   (0x11)
+extern uint8_t PORTF   ;
 #define PF7     7
 #define PF6     6
 #define PF5     5
@@ -183,7 +183,7 @@
 #define PF1     1
 #define PF0     0
 
-#define PING    (0x12)
+extern uint8_t PING    ;
 #define PING5   5
 #define PING4   4
 #define PING3   3
@@ -191,7 +191,7 @@
 #define PING1   1
 #define PING0   0
 
-#define DDRG    (0x13)
+extern uint8_t DDRG    ;
 #define DDG5    5
 #define DDG4    4
 #define DDG3    3
@@ -199,7 +199,7 @@
 #define DDG1    1
 #define DDG0    0
 
-#define PORTG   (0x14)
+extern uint8_t PORTG   ;
 #define PG5     5
 #define PG4     4
 #define PG3     3
@@ -207,50 +207,50 @@
 #define PG1     1
 #define PG0     0
 
-#define TIFR0   (0x15)
+extern uint8_t TIFR0   ;
 #define OCF0B   2
 #define OCF0A   1
 #define TOV0    0
 
-#define TIFR1   (0x16)
+extern uint8_t TIFR1   ;
 #define ICF1    5
 #define OCF1C   3
 #define OCF1B   2
 #define OCF1A   1
 #define TOV1    0
 
-#define TIFR2   (0x17)
+extern uint8_t TIFR2   ;
 #define OCF2B   2
 #define OCF2A   1
 #define TOV2    0
 
-#define TIFR3   (0x18)
+extern uint8_t TIFR3   ;
 #define ICF3    5
 #define OCF3C   3
 #define OCF3B   2
 #define OCF3A   1
 #define TOV3    0
 
-#define TIFR4   (0x19)
+extern uint8_t TIFR4   ;
 #define ICF4    5
 #define OCF4C   3
 #define OCF4B   2
 #define OCF4A   1
 #define TOV4    0
 
-#define TIFR5   (0x1A)
+extern uint8_t TIFR5   ;
 #define ICF5    5
 #define OCF5C   3
 #define OCF5B   2
 #define OCF5A   1
 #define TOV5    0
 
-#define PCIFR   (0x1B)
+extern uint8_t PCIFR   ;
 #define PCIF2  2
 #define PCIF1   1
 #define PCIF0   0
 
-#define EIFR   (0x1C)
+extern uint8_t EIFR   ;
 #define INTF7   7
 #define INTF6   6
 #define INTF5   5
@@ -260,7 +260,7 @@
 #define INTF1   1
 #define INTF0   0
 
-#define EIMSK   (0x1D)
+extern uint8_t EIMSK   ;
 #define INT7    7
 #define INT6    6
 #define INT5    5
@@ -270,9 +270,9 @@
 #define INT1    1
 #define INT0    0
 
-#define GPIOR0  (0x1E)
+extern uint8_t GPIOR0  ;
 
-#define EECR    (0x1F)
+extern uint8_t EECR    ;
 #define EEPM1   5
 #define EEPM0   4
 #define EERIE   3
@@ -280,13 +280,13 @@
 #define EEPE    1
 #define EERE    0
 
-#define EEDR    (0X20)
+extern uint8_t EEDR    ;
 
 /* Combine EEARL and EEARH */
-#define EEAR    _SFR_IO16(0x21)
+extern uint8_t EEAR  ;
 
-#define EEARL   (0x21)
-#define EEARH   (0X22)
+extern uint8_t EEARL   ;
+extern uint8_t EEARH   ;
 
 /* 6-char sequence denoting where to find the EEPROM registers in memory space.
    Adresses denoted in hex syntax with uppercase letters. Used by the EEPROM
@@ -296,12 +296,12 @@
    Last two letters:   EEAR address.  */
 #define __EEPROM_REG_LOCATIONS__ 1F2021
 
-#define GTCCR   (0x23)
+extern uint8_t GTCCR   ;
 #define TSM     7
 #define PSRASY  1
 #define PSRSYNC 0
 
-#define TCCR0A  (0x24)
+extern uint8_t TCCR0A  ;
 #define COM0A1  7
 #define COM0A0  6
 #define COM0B1  5
@@ -691,7 +691,7 @@ extern uint8_t TCCR1B;
 
 /* Reserved [0x8E..0x8F] */
 
-#define TCCR3A  (0x90)
+extern uint8_t  TCCR3A;
 #define COM3A1  7
 #define COM3A0  6
 #define COM3B1  5
