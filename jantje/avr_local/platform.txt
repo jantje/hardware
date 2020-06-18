@@ -36,7 +36,7 @@ compiler.cpp.extra_flags=
 compiler.ar.extra_flags=
 compiler.objcopy.eep.extra_flags=
 compiler.elf2hex.extra_flags=
-compiler.path.windows={runtime.tools.mingw.path}/bin/
+compiler.path.windows={runtime.tools.MinGW.path}/bin/
 
 # AVR compile patterns
 # --------------------
