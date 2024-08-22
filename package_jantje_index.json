@@ -9,9 +9,10 @@
         "online": "http://eclipse.baeyens.it"
       },
       "platforms": [    {
-          "name": "esp hardware debug",
+          "name": "[DEPRECATED use native platform+new IDE feature] esp hardware debug",
           "architecture": "esp8266",
           "version": "1.0.0",
+          "deprecated": true,
           "category": "debug",
           "help": {
             "online": "http://sloeber.io/"
@@ -28,7 +29,8 @@
           ]
         }
       ,      {
-          "name": "samd hardware debug",
+          "name": "[DEPRECATED use native platform+new IDE feature] samd hardware debug",
+          "deprecated": true,
           "architecture": "samd",
           "version": "1.0.0",
           "category": "debug",
