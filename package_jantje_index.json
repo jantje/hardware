@@ -59,7 +59,7 @@
           },
           "url": "https://github.com/jantje/hardware/releases/download/1.0.0/local-debug-arduino-avr-1.0.2.zip",
           "archiveFileName": "local-debug-arduino-avr-1.0.2.zip",
-          "checksum": "SHA-256:5292d3559de74eb990ff570df43887b44d4e3c6b80ab4ab0f945e94dd68d8210",
+          "checksum": "SHA-256:9a813f65d89ffe8d02d608ef33ef58402f01e1940ebfa862d67b38ea0e750c45",
           "size": "4991634",
           "boards": [
             {"name": "Arduino Yun"},
@@ -199,4 +199,5 @@
     }
   ]
 }
+
 
