@@ -190,7 +190,7 @@
               "host": "i686-mingw32",
               "archiveFileName": "min_gw_5.3.0.zip",
               "url": "https://github.com/jantje/hardware/releases/download/1.0.0/min_gw_5.3.0.zip",
-              "checksum": "SHA-256:fd8c111c861144f932728e00abd3f7d1107e186eb9cd6083a54c7236ea78b7c2",
+              "checksum": "SHA-256:44ec3eb6ba026abc1afc3c2240824db46b05413e749e3c0fde2dd1cdd97fc342",
               "size": "84537449"
             }
           ]
@@ -199,5 +199,6 @@
     }
   ]
 }
+
 
 
